@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo/Brand -->
+    <div class="navbar-brand">
+      <a routerLink="/">
+        <img src="assets/images/logo.png" alt="Logo" width="157" height="37">
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="navbar-links" [class.active]="isMenuOpen">
+      <ul>
+        <li><a routerLink="/home" (click)="closeMenu()" class="active">Home</a></li>
+        <li><a routerLink="/about" (click)="closeMenu()" class="active">About us</a></li>
+        <li><a routerLink="/portfolio" (click)="closeMenu()" class="active">Portfolio</a></li>
+        <li><a routerLink="/services" (click)="closeMenu()" class="active">Services</a></li>
+        <li><a routerLink="/pricing" (click)="closeMenu()" class="active">Pricing</a></li>
+        <li><a routerLink="#/ontacts" (click)="closeMenu()" class="active">Contacts</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
